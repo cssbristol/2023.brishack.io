@@ -17,7 +17,7 @@ export const Navbar = () => {
             window.addEventListener("resize", () => checkForMobile(setMobile));
             setListeningForResize(true);
         }
-    }, [isMobile, setMobile]);
+    }, [isMobile, setMobile, isListeningForResize, setListeningForResize]);
 
     return (
         <nav className="nav-primary">
