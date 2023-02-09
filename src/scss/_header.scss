@@ -1,0 +1,75 @@
+header.hero {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.75) 0%, transparent 100%), url("/assets/bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    text-shadow: 0 0 2em black;
+    text-align: center;
+
+    @media screen and (min-aspect-ratio: 16/9) {
+        animation: zoom 60s ease 0s infinite alternate;
+    }
+
+    .logo {
+        font-size: 2em;
+    }
+
+    .theme-name {
+        margin-top: 20vh;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 3em;
+        letter-spacing: 0.1em;
+
+        &::before {
+            content: 'The Theme:';
+            display: block;
+            font-size: 0.5em;
+            font-weight: $normal_font_weight;
+            letter-spacing: 0.1em;
+            text-align: center;
+        }
+    }
+
+    .clock {
+        padding: 20vh 0 5vh;
+    }
+}
+
+@keyframes zoom {
+    from {
+        background-size: 100%;
+    }
+
+    to {
+        background-size: 150%;
+    }
+}
+
+a.button {
+    display: inline-block;
+    padding: $spacer/2;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(2.5px);
+    color: rgb(255, 255, 255);
+    border: 3px solid rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    transition: background-color .25s ease 0s, transform .25s ease-in-out 0s;
+
+    &:hover,
+    &:focus {
+        background: yellow;
+        color: black;
+        border-color: yellow;
+    }
+
+    &:focus {
+        transform: scale(1.25);
+    }
+}

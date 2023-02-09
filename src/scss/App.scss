@@ -1,0 +1,61 @@
+@import "variables";
+@import "grid";
+@import "headings";
+@import "logo";
+@import "navbar";
+@import "header";
+@import "clock";
+
+* {
+    font-family: $font_family;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    line-height: 1.5;
+}
+
+html,
+body {
+    height: 100%;
+    font-size: $base_font_size;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    color: #fff;
+
+    a {
+        color: rgb(255, 112, 136);
+    }
+}
+
+section {
+    font-size: 1.25em;
+
+    p {
+        margin-bottom: 1.5em;
+    }
+
+    ol {
+        margin: 0;
+        padding: 0;
+
+        li {
+            margin-bottom: 1.5em;
+        }
+    }
+}
+
+#faq {
+    summary {
+        h3 {
+            display: inline;
+            text-transform: none;
+            font-size: 1em;
+            letter-spacing: initial;
+        }
+    }
+}
+
+::selection {
+    background: rebeccapurple;
+    color: #fff;
+}

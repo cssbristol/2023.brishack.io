@@ -1,0 +1,40 @@
+.clock {
+    @include grid-container();
+    width: 90%;
+    margin: 0 auto;
+
+    .days,
+    .hours,
+    .mins,
+    .secs {
+        @include cols(3);
+        font-weight: $bold_font_weight;
+        font-size: 2em;
+
+        @media screen and (min-width: 60em) {
+            font-size: 3em;
+        }
+
+        &::after {
+            text-transform: uppercase;
+            display: block;
+            font-size: 0.5em;
+        }
+    }
+
+    .days::after {
+        content: 'Days';
+    }
+
+    .hours::after {
+        content: 'Hours';
+    }
+
+    .mins::after {
+        content: 'Minutes';
+    }
+
+    .secs::after {
+        content: 'Seconds';
+    }
+}

@@ -1,0 +1,57 @@
+.nav-primary {
+    @include container();
+    @include grid-container();
+    justify-content: space-between;
+    align-items: center;
+
+    color: #fff;
+    font-size: 1.5em;
+
+    a {
+        color: #fff;
+        text-decoration: none;
+
+        &:focus {
+            color: yellow;
+            outline: 3px solid yellow;
+        }
+    }
+
+    .btn-collapse {
+        @include cols(12);
+        @include pl-0();
+        @include pr-0();
+
+        button {
+            background: #fff;
+            color: black;
+            padding: $spacer/4;
+            font-size: inherit;
+            border: none;
+        }
+    }
+
+    ul {
+        list-style: none;
+
+        li {
+            display: inline-block;
+            margin: 0 $spacer/2;
+        }
+
+        &.collapsed.mobile {
+            display: none;
+        }
+
+        &.expanded.mobile {
+            @include cols(12);
+            @include pl-0();
+            @include pr-0();
+
+            li {
+                display: block;
+                margin: $spacer/2 0;
+            }
+        }
+    }
+}
