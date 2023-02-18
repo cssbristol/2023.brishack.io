@@ -33,7 +33,7 @@ export const Navbar = () => {
             <ul className={`${expanded ? "expanded" : "collapsed"} ${isMobile ? "mobile" : "not-mobile"}`}>
                 <li><a href="#about">About</a></li>
                 <li><a href="#faq">FAQ</a></li>
-                <li><a href="#organisors">Organisers</a></li>
+                <li><a href="#prizes">Prizes</a></li>
                 <li><a href="#sponsors">Sponsors</a></li>
                 <li><a href="mailto:brishack@cssbristol.co.uk">Contact Us</a></li>
             </ul>
