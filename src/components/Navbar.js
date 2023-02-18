@@ -35,7 +35,7 @@ export const Navbar = () => {
                 <li><a href="#faq">FAQ</a></li>
                 <li><a href="#organisors">Organisers</a></li>
                 <li><a href="#sponsors">Sponsors</a></li>
-                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="mailto:brishack@cssbristol.co.uk">Contact Us</a></li>
             </ul>
         </nav>
     )

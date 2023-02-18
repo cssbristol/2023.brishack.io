@@ -28,8 +28,6 @@ body {
 }
 
 section {
-    font-size: 1.25em;
-
     p {
         margin-bottom: 1.5em;
     }
@@ -51,6 +49,42 @@ section {
             text-transform: none;
             font-size: 1em;
             letter-spacing: initial;
+        }
+
+        margin: $spacer/2 0;
+    }
+}
+
+#prizes {
+    >ul {
+        h3 {
+            text-transform: none;
+            text-align: left;
+            font-size: 1em;
+            letter-spacing: initial;
+        }
+    }
+}
+
+#sponsors {
+    ul.sponsor-list {
+        @include grid-container();
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            @include cols(12);
+            @include cols(6, 20);
+            @include cols(4, 40);
+            @include cols(3, 60);
+
+            margin: $spacer/2 0;
+
+            img {
+                width: 80%;
+                height: auto;
+            }
         }
     }
 }
