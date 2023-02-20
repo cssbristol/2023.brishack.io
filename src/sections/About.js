@@ -1,6 +1,8 @@
 export const About = () => {
     return (
         <section id="about" className="container">
+            <h2>Venue &amp; Dates</h2>
+            <p>The event will be held in the Merchant Venturer's Building (75 Woodland Road) from the <strong>26th to 27th February</strong></p>
             <h2>The Theme</h2>
             <p>This year, the theme is <strong>"My Utopia"</strong>. Everyone has their own unique image of what a perfect utopia looks like, so dream up a project that will help us get to what your (or your team's) image of what a Utopian Society looks like!</p>
             <p>The sky is the limit with what you can do&mdash;we want to see the full breadth of your imagination, from projects tackling economic equality, sustainability issues, social welfare or even creativity and artistic expression; show us how you would want to change the world.</p>
