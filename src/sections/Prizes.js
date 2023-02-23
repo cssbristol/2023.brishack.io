@@ -5,16 +5,16 @@ export const Prizes = () => {
             <p>You can win multiple categories to win even bigger prizes! The total prize pool is <strong>over £2000!</strong></p>
             <ul>
                 <li>
-                    <h3>Software</h3>
+                    <h3>Software &mdash; £600</h3>
                     <p>Awarded to the project which has the best use of software.</p>
                 </li>
                 <li>
-                    <h3>Electronics/Embedded System</h3>
+                    <h3>Electronics/Embedded System &mdash; £600</h3>
                     <p><strong>Sponsored by XMOS</strong></p>
                     <p>Awarded to the best Electronics project, or project utilising embedded systems. We have Raspberry Pi Picos available which you can keep if you use them in your project.</p>
                 </li>
                 <li>
-                    <h3>WebML Category</h3>
+                    <h3>WebML &mdash; £600</h3>
                     <p><strong>Sponsored by Google TensorFlow.js</strong></p>
                     <p>Awarded to the project best utilising TensorFlow.js to implement WebML in their apps. This can be on the front-end in the browser, or server-side using node.js.</p>
                     <p>If your project is particularly impressive, you might even be featured on Google's official TensorFlow JS show!</p>
@@ -37,6 +37,10 @@ export const Prizes = () => {
                         </li>
                         <li><a href="https://tfhub.dev/s?deployment-format=tfjs">Tensorflow Hub for raw models</a>. Not all will be compatible with JS or will need conversion.</li>
                     </ul>
+                </li>
+                <li>
+                    <h3>People's Choice &mdash; £300</h3>
+                    <p>We let the people decide! The project with most votes wins!</p>
                 </li>
             </ul>
         </section>
