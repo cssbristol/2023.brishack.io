@@ -89,6 +89,21 @@ section {
     }
 }
 
+table {
+    border-collapse: collapse;
+    width: 100%;
+
+    tr {
+        padding: 1em;
+    }
+
+    &,
+    td {
+        border: 2px solid grey;
+        padding: 1em;
+    }
+}
+
 ::selection {
     background: rebeccapurple;
     color: #fff;
