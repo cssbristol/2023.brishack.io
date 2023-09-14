@@ -7,7 +7,7 @@ const tick = (setTimeLeft, eventDate, currentTime) => {
         diffHours = Math.floor(diffMins / 60),
         diffDays = Math.floor(diffHours / 24);
 
-    if(diffTime > 0 {
+    if(diffTime > 0) {
         const days = diffDays;
         const hours = diffHours - (days * 24);
         const minutes = diffMins - (days * 24 * 60) - (hours * 60);
