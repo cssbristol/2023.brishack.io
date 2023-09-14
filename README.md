@@ -1,3 +1,3 @@
-# 2022.brishack.io
+# 2023.brishack.io
 
 Archived website from the 2022 BrisHack.
