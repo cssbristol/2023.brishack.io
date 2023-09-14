@@ -24,10 +24,23 @@ jobs:
       - name: Build site
         run: npm run build
 
-      - uses: actions/upload-artifact@v3
+      - name: Archive artifact
+        shell: sh
+        run: |
+          tar \
+            --dereference --hard-dereference \
+            --directory build \
+            -cvf "$RUNNER_TEMP/artifact.tar" \
+            --exclude=.git \
+            --exclude=.github \
+            .
+        
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
         with:
           name: github-pages
-          path: build
+          path: ${{ runner.temp }}/artifact.tar
+          if-no-files-found: error
 
   deploy:
     needs: build
