@@ -1,3 +1,5 @@
+# This was made in a rush and has bad and ugly code, please don't judge :|
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
