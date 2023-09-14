@@ -7,11 +7,11 @@ const tick = (setTimeLeft, eventDate, currentTime) => {
         diffHours = Math.floor(diffMins / 60),
         diffDays = Math.floor(diffHours / 24);
 
-    const days = diffDays;
-    const hours = diffHours - (days * 24);
-    const minutes = diffMins - (days * 24 * 60) - (hours * 60);
-    const seconds = diffSecs - (days * 24 * 60 * 60) - (hours * 60 * 60) - (minutes * 60);
-    
+    const days = Math.max(diffDays, 0);
+    const hours = Math.max(diffHours - (days * 24), 0);
+    const minutes = Math.max(diffMins - (days * 24 * 60) - (hours * 60), 0);
+    const seconds = Math.max(diffSecs - (days * 24 * 60 * 60) - (hours * 60 * 60) - (minutes * 60), 0);
+
     setTimeLeft({
         days,
         hours,
@@ -19,10 +19,6 @@ const tick = (setTimeLeft, eventDate, currentTime) => {
         seconds
     });
 
-}
-
-const zeroIfNegative = (num) => {
-    return num > 0 ? num : 0;
 }
 
 export const Clock = () => {
@@ -39,10 +35,10 @@ export const Clock = () => {
 
     return (
         <div className="clock">
-            <div className="days" data-label="Days">{`${zeroIfNegative(timeLeft.days)}`}</div>
-            <div className="hours" data-label="Hours">{`${zeroIfNegative(timeLeft.hours)}`}</div>
-            <div className="mins" data-label="Minutes">{`${zeroIfNegative(timeLeft.minutes)}`}</div>
-            <div className="secs" data-label="Seconds">{`${zeroIfNegative(timeLeft.seconds)}`}</div>
+            <div className="days" data-label="Days">{`${timeLeft.days}`}</div>
+            <div className="hours" data-label="Hours">{`${timeLeft.hours}`}</div>
+            <div className="mins" data-label="Minutes">{`${timeLeft.minutes}`}</div>
+            <div className="secs" data-label="Seconds">{`${timeLeft.seconds}`}</div>
         </div>
     )
 }
