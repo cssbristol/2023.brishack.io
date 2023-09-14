@@ -7,18 +7,26 @@ const tick = (setTimeLeft, eventDate, currentTime) => {
         diffHours = Math.floor(diffMins / 60),
         diffDays = Math.floor(diffHours / 24);
 
-    const days = Math.max(diffDays, 0);
-    const hours = Math.max(diffHours - (days * 24), 0);
-    const minutes = Math.max(diffMins - (days * 24 * 60) - (hours * 60), 0);
-    const seconds = Math.max(diffSecs - (days * 24 * 60 * 60) - (hours * 60 * 60) - (minutes * 60), 0);
-
-    setTimeLeft({
-        days,
-        hours,
-        minutes,
-        seconds
-    });
-
+    if(diffTime > 0 {
+        const days = diffDays;
+        const hours = diffHours - (days * 24);
+        const minutes = diffMins - (days * 24 * 60) - (hours * 60);
+        const seconds = diffSecs - (days * 24 * 60 * 60) - (hours * 60 * 60) - (minutes * 60);
+    
+        setTimeLeft({
+            days,
+            hours,
+            minutes,
+            seconds
+        });
+    } else {
+        setTimeLeft({
+            days: 0,
+            hours: 0,
+            minutes: 0,
+            seconds: 0,
+        });
+    }
 }
 
 export const Clock = () => {
